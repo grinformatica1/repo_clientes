@@ -1,15 +1,5 @@
 package io.github.grinformatica1.clientes.rest;
 
-<<<<<<< HEAD
-import io.github.grinformatica1.clientes.model.repository.ClienteRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-public class ClienteController {
-
-    private ClienteRepository repository;
-=======
 import io.github.grinformatica1.clientes.model.entity.Cliente;
 import io.github.grinformatica1.clientes.model.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,15 +12,11 @@ import org.springframework.web.server.ResponseStatusException;
 public class ClienteController {
 
     private final ClienteRepository repository;
->>>>>>> master
 
     @Autowired
     public ClienteController(ClienteRepository repository){
         this.repository = repository;
     }
-<<<<<<< HEAD
-}
-=======
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

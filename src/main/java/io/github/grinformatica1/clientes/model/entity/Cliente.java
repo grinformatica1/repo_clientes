@@ -1,9 +1,7 @@
 package io.github.grinformatica1.clientes.model.entity;
 
-<<<<<<< HEAD
-=======
+
 import com.fasterxml.jackson.annotation.JsonFormat;
->>>>>>> master
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,12 +23,8 @@ public class Cliente {
     @Column(nullable = false, length = 11)
     private String cpf;
 
-<<<<<<< HEAD
-    @Column(name = "data_cadastro")
-=======
     @Column(name = "data_cadastro", updatable = false)
     @JsonFormat(pattern = "dd/MM/yyyy")
->>>>>>> master
     private LocalDate dataCadastro;
 
     @PrePersist
