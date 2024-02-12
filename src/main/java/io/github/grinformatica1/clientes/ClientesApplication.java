@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class ClientesApplication {
 
+<<<<<<< HEAD
     @Bean
     public CommandLineRunner run(@Autowired ClienteRepository repository){
         return args ->{
@@ -18,6 +19,15 @@ public class ClientesApplication {
             repository.save(cliente);
         };
     }
+=======
+//    @Bean
+//    public CommandLineRunner run(@Autowired ClienteRepository repository){
+//        return args ->{
+//            Cliente cliente = Cliente.builder().cpf("00000000000").nome("Teste").build();
+//            repository.save(cliente);
+//        };
+//    }
+>>>>>>> master
 
     public static void main(String[] args) {
 
