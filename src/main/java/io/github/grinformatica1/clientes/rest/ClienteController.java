@@ -2,6 +2,7 @@ package io.github.grinformatica1.clientes.rest;
 
 import io.github.grinformatica1.clientes.model.entity.Cliente;
 import io.github.grinformatica1.clientes.model.repository.ClienteRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class ClienteController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Cliente salvar( @RequestBody Cliente cliente ){
+    public Cliente salvar( @RequestBody @Valid Cliente cliente ){
         return repository.save(cliente);
     }
 
@@ -44,7 +45,7 @@ public class ClienteController {
         repository.findById(id).map( cliente -> {
             cliente.setNome(clienteAtualizado.getNome());
             cliente.setCpf(clienteAtualizado.getCpf());
-//            clienteAtualizado.setId(cliente.getId());
+//           clienteAtualizado.setId(cliente.getId());
             return repository.save(clienteAtualizado);
         }).orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }

@@ -21,7 +21,6 @@ public class ClientesApplication {
 //    }
 
     public static void main(String[] args) {
-
         SpringApplication.run(ClientesApplication.class, args);
     }
 }
